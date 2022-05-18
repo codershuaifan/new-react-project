@@ -1,0 +1,8 @@
+.location{
+  float:right;
+}
+.name{
+  color: #1890ff;
+  font-weight: bold;
+  font-size: 18px;
+}
