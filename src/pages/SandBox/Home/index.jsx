@@ -155,11 +155,11 @@ export default function Home() {
           <Card hoverable bodyStyle={{ backgroundColor: '#D5D5D5' }} title="作者简介">
             <div>
               姓名:<b style={{ marginLeft: '10px' }}>黄*</b>
-              <span style={{ marginLeft: '95px' }}>学校:<b>盐城师范学院</b></span>
+              <span style={{ marginLeft: '95px' }}>学校:<b style={{ marginLeft: '10px' }}>盐城师范学院</b></span>
             </div>
             <div>
               年龄:<b style={{ marginLeft: '10px' }}>21</b>
-              <span style={{ marginLeft: '100px' }}>专业:<b>数字媒体技术</b></span>
+              <span style={{ marginLeft: '100px' }}>专业:<b style={{ marginLeft: '10px' }}>数字媒体技术</b></span>
             </div>
           </Card>
         </Col>

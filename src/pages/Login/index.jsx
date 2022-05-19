@@ -166,15 +166,14 @@ export default function Login() {
   }, [])
   const navigate = useNavigate()
   //表单验证成功后
-  const onFinish = (values) => {
-    axios.get(`/users?username=${values.username}&password=${values.password}&roleState=true&_expand=role`).then(res => {
-      if (res.data.length) {
-        const data = JSON.stringify(res.data[0])
-        window.localStorage.setItem('token', data)
-        navigate('/')
-        message.success('登陆成功');
-      } else message.error('登陆失败');
-    })
+  const onFinish = async (values) => {
+    const res=await axios.get(`/users?username=${values.username}&password=${values.password}&roleState=true&_expand=role`)
+    if(res.data.length){
+      const data = JSON.stringify(res.data[0])
+      window.localStorage.setItem('token', data)
+      navigate('/')
+      message.success('登陆成功');
+    }else message.error('登陆失败');
   };
   //用户列表
   const arr = ['超级管理员', '区域管理员', '区域编辑']
