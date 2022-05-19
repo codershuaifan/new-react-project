@@ -20,10 +20,13 @@ import NewsUpdate from '../pages/news-manage/NewsUpdate'
 import News from '../pages/news'
 import Detail from '../pages/detail'
 
+
 //导航守卫
 const isLogin = () => {
-  return localStorage.getItem('token') ? <NewsSandBox /> : <Navigate to='/login' />
+  return window.localStorage.getItem('token') ? <NewsSandBox /> : <Navigate to='/login' />
 }
+// console.log(window.localStorage.getItem('token'));
+
 const router = [
   {
     path: '/login',
@@ -39,8 +42,8 @@ const router = [
   },
   {
     path: '/',
-    // element: <NewsSandBox />,
-    element: isLogin(),
+    element: <NewsSandBox />,
+    // element: isLogin(),
     children: [
       {
         path: '/',

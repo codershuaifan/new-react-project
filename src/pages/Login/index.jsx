@@ -167,14 +167,21 @@ export default function Login() {
   const navigate = useNavigate()
   //表单验证成功后
   const onFinish = async (values) => {
-    const res=await axios.get(`/users?username=${values.username}&password=${values.password}&roleState=true&_expand=role`)
-    if(res.data.length){
+    const res = await axios.get(`/users?username=${values.username}&password=${values.password}&roleState=true&_expand=role`)
+    if (res.data.length) {
       const data = JSON.stringify(res.data[0])
       window.localStorage.setItem('token', data)
+      // window.location.reload()
       navigate('/')
       message.success('登陆成功');
-    }else message.error('登陆失败');
+    } else message.error('登陆失败');
   };
+  // useEffect(() => {
+  //   if (window.localStorage.getItem('token')) {
+  //     navigate('/')
+  //     message.success('登陆成功');
+  //   }
+  // }, [window.localStorage.getItem('token')])
   //用户列表
   const arr = ['超级管理员', '区域管理员', '区域编辑']
   const content = (
@@ -215,7 +222,7 @@ export default function Login() {
             <Button type="primary" htmlType="submit" className="login-form-button">
               登录
             </Button>
-            <Button className={style.button} onClick={()=>navigate('/news')}>
+            <Button className={style.button} onClick={() => navigate('/news')}>
               游客系统
             </Button>
           </Form.Item>

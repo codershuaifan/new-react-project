@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Outlet } from 'react-router-dom'
 import './NewsSandBox.css'
 import { Spin } from 'antd'
@@ -13,11 +13,6 @@ const { Content } = Layout;
 
 function NewsSandBox(props) {
   const spinning=props.spinning
-  const [collapsed, setCollapsed] = useState(false)
-  //改变触发器状态
-  const toggle = () => {
-    setCollapsed(!collapsed)
-  }
   return (
     <Layout>
       {/* 侧边导航 */}
