@@ -42,8 +42,8 @@ const router = [
   },
   {
     path: '/',
-    element: <NewsSandBox />,
-    // element: isLogin(),
+    // element: <NewsSandBox />,
+    element: isLogin(),
     children: [
       {
         path: '/',

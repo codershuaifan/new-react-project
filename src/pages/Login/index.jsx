@@ -171,17 +171,10 @@ export default function Login() {
     if (res.data.length) {
       const data = JSON.stringify(res.data[0])
       window.localStorage.setItem('token', data)
-      // window.location.reload()
       navigate('/')
       message.success('登陆成功');
     } else message.error('登陆失败');
   };
-  // useEffect(() => {
-  //   if (window.localStorage.getItem('token')) {
-  //     navigate('/')
-  //     message.success('登陆成功');
-  //   }
-  // }, [window.localStorage.getItem('token')])
   //用户列表
   const arr = ['超级管理员', '区域管理员', '区域编辑']
   const content = (
@@ -219,7 +212,7 @@ export default function Login() {
             <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Password" />
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit" className="login-form-button">
+            <Button type="primary" htmlType='submit' className="login-form-button">
               登录
             </Button>
             <Button className={style.button} onClick={() => navigate('/news')}>
