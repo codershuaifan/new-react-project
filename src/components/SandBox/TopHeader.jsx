@@ -45,7 +45,6 @@ function TopHeader(props) {
       {collapsed ? <MenuUnfoldOutlined className='trigger' onClick={toggle} /> :
         <MenuFoldOutlined className='trigger' onClick={toggle} />}
       {/* 用户下拉菜单 */}
-      {/* <span style={{fontSize:'40px',color:'blue',fontWeight:'bolder',marginLeft:'100px'}}>全球新闻发布管理系统</span> */}
       <Dropdown overlay={menu} className={style.location} placement="bottomRight">
         <Space>
           欢迎<span className={style.name}>{currentUserDATA.username}</span>回来

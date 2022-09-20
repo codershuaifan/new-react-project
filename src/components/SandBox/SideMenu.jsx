@@ -64,7 +64,7 @@ function SideMenu(props) {
 
   return (
     <Sider trigger={null} collapsible className={style.overflow} collapsed={props.collapsed}>
-      <div className={style.logo}>全球新闻发布系统</div>
+      <div className={style.logo}>新闻创作系统</div>
       <Menu theme="dark" mode="inline" selectedKeys={pathname} defaultOpenKeys={mainPath}>
         {renderMenu(menuList)}
       </Menu>
