@@ -193,7 +193,7 @@ export default function Login() {
     <div>
       <Particles id="tsparticles" init={particlesInit} options={options} />
       <div className={style.card}>
-        <div className={style.name}>全球新闻发布管理</div>
+        <div className={style.name}>新闻创作系统</div>
         <Form initialValues={{ remember: true, }} onFinish={onFinish} className={style.form}>
           <Form.Item name="username" rules={[
             {
@@ -216,7 +216,7 @@ export default function Login() {
               登录
             </Button>
             <Button className={style.button} onClick={() => navigate('/news')}>
-              游客系统
+              浏览新闻
             </Button>
           </Form.Item>
         </Form>

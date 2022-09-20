@@ -1,11 +1,12 @@
 .card{
   width: 550px;
   height: 350px;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  border-radius: 15px;
 }
 .form{
   padding: 30px !important;

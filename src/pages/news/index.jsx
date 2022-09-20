@@ -15,7 +15,7 @@ export default function News() {
   }, [])
   return (
     <div style={{ padding: '30px' }}>
-      <PageHeader title="全球大新闻" subTitle="查看新闻" />
+      <PageHeader title="新闻分类" subTitle="查看新闻" />
       <Row gutter={[16, 16]}>
         {
           newsData.map(item => {
